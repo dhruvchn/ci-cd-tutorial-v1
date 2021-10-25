@@ -44,6 +44,7 @@ public with sharing class Spoonacular {
 
     @AuraEnabled
     public static String getRecipeByIngredients(String ingredients){
+        //Changes made
         Http http = new Http();
         HttpRequest request = new HttpRequest();
         request.setEndpoint(RECEIPE_API+'/recipes/findByIngredients?ingredients='+ingredients+'&number=10&apiKey='+API_KEY);
